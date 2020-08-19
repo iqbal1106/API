@@ -17,10 +17,8 @@ def soldier(path, format):
             i=i+1
             filehandle.writelines("%s\n" %fileCapitalized)
         filehandle.writelines("total files are:" + str(i))
-
-    for file in files:
-  #          if file not in filelist:
-                os.rename(file, file.capitalize())
+        # here we have to come out of the for loop so that we can perform another function
+        #otherwise it will not allow.
 
     with open("sarah.txt", "w" ) as filehandle:
         for file in files:
@@ -31,20 +29,6 @@ def soldier(path, format):
                 filehandle.writelines("\n" + file)
 
 
-
-
-#         filelist = f.read().split("\n")
-# #
-#         for lines in files:
-#             os.rename( filehandle, lines.capitalize())
-
-
-#            os.rename(file, file.capitalize())
-#
-#         if os.path.splitext(file)[1] == format:
-#             os.rename(file, f"{i}{format}")
-#             i +=1
-#
 soldier(r"C:\Users\Iqbal\Desktop", ".jpg")
 
 
